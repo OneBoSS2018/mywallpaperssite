@@ -71,6 +71,8 @@ class WallpapersController < ApplicationController
     def wallpaper_params
       params.require(:wallpaper).permit(:title, :content, :user_id)
     end
-
+    
+    def about
+    end
     
 end
