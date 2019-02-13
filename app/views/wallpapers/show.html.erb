@@ -6,14 +6,16 @@
 </p>
 
 <p>
+  <strong>Author:</strong>
+  <%= @wallpaper.user.email %>
+</p>
+
+<p>
   <strong>Content:</strong>
   <%= @wallpaper.content %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @wallpaper.user.email %>
-</p>
+
 
 <%= link_to 'Edit', edit_wallpaper_path(@wallpaper) %> |
 <%= link_to 'Back', wallpapers_path %>
