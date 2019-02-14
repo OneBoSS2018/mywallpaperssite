@@ -3,7 +3,7 @@
 <hr>
   <tbody>
     <% @wallpapers.each do |wallpaper| %>
-      
+         <p><%= image_tag wallpaper.avatar.url(:thumb)%></p>      
         <p><h3><%= wallpaper.title %></h3></p>
         <div class= "conteiner "> <%= wallpaper.content %></div>
         <h5>Author: <%= wallpaper.user.email %></h5>

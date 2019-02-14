@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <p><%= link_to 'About', about_path %></p>
+    <p><%= link_to 'About', about_path %>
+      <%= link_to 'Home', root_path %>
+    </p>
     <p>
       <% if user_signed_in? %>
       <li>
@@ -28,7 +30,6 @@
       </li>
     </p>
     <% end %>
-    <%= link_to 'About', about_path %>
     <%= yield %>
   </body>
 </html>

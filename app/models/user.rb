@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_many :wallpapers 
 
   validates :email, presence: true 
-  validates_associated :wallpapers,
-  validates :password, length: { in: 6..20 }
+  validates_associated :wallpapers
   validates :email, uniqueness: true         
 end
