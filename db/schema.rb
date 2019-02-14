@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_003606) do
+ActiveRecord::Schema.define(version: 2019_02_14_021248) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.integer "wallpaper_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["wallpaper_id"], name: "index_comments_on_wallpaper_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

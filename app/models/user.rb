@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :wallpapers 
+  has_many :wallpapers
 
   validates :email, presence: true 
   validates_associated :wallpapers

@@ -20,8 +20,12 @@
   <strong>Content:</strong>
   <%= @wallpaper.content %>
 </p>
-
-
+<br>
+<h2><%= @wallpaper.comments.count %></h2>
+    <%= render @wallpaper.comments %>
+    <h3>Add Comment: </h3>
+    <%= render 'comments/form' %>
+<br>
 
 <%= link_to 'Edit', edit_wallpaper_path(@wallpaper) %> |
 <%= link_to 'Back', wallpapers_path %>
