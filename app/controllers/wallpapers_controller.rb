@@ -4,7 +4,7 @@ class WallpapersController < ApplicationController
   # GET /wallpapers
   # GET /wallpapers.json
   def index
-    @wallpapers = Wallpaper.all
+    @wallpapers = Wallpaper.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /wallpapers/1
