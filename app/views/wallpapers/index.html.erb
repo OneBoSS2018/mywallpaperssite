@@ -22,8 +22,10 @@
 <br>
 <br>
 
+<% if user_signed_in? %> 
+
 <%= link_to 'New Wallpaper', new_wallpaper_path %>
 <hr>
 
-
+<% end %>
 <%= will_paginate @wallpapers %>
